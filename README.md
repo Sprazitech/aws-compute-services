@@ -40,6 +40,12 @@ Outbound Rules: Leave as default (All traffic allowed).
 
 Click Create security group.
 
+
+![Task 1](photos/custom-sg_1.JPG)
+
+
+![Task 1](photos/custome-sg_2.JPG)
+
 **Step 2**
 
 To launch an EC2 Instance:
@@ -74,6 +80,9 @@ Review the settings.
 
 Click Launch Instance.
 
+
+![Task 1](photos/Ec2_jpg.JPG)
+
 **Step 3**
 
 Connect to Your EC2 Instance you created.
@@ -89,6 +98,9 @@ Choose SSH Client Using this following commands;
 2. ssh -i /path/to/your-key.pem ec2-user@your-ec2-public-ip. (Replace /path/to/your-key.pem with where you saved your key, and replace your-ec2-public-ip).
 
 
+![Task 1](photos/ssh_1.JPG)
+
+
 
 **2 Install a web server Apache on the instance**
 
@@ -101,9 +113,16 @@ Choose SSH Client Using this following commands;
  2. Update the Server Packages.
     Using this command sudo yum update -y
 
+
+    ![Task 1](photos/apache_1.JPG)
+
+
 3. Install the Web Server.
    Install Apache (httpd)
    Using this command sudo yum install httpd -y
+
+
+   ![Task 1](photos/apache_2.JPG)
 
 4. Start and Enable the Web Server
    After installing, you need to start the web server and enable it to auto-start when the server reboots.
@@ -113,6 +132,9 @@ Choose SSH Client Using this following commands;
 
 5. Test the Web Server
    Open your browser and visit: http://your-ec2-public-ip (your EC2 public IP address)
+
+
+   ![Task 1](photos/apache_3.JPG)
 
 
 
@@ -146,6 +168,10 @@ Storage: Default is fine.
 
 Click Create launch template.
 
+
+![Task 1](photos/Ec2_2.JPG)
+
+
 **Step 2**
 
 Create a Target Group.
@@ -171,6 +197,10 @@ Protocol: HTTP.
 Path: / (default).
 
 Click Create target group.
+
+
+![Task 1](photos/Targetgroup_1.JPG)
+
 
 **Step 3**
 
@@ -199,6 +229,9 @@ Register Targets:
 Choose your Target Group created in Step 3.
 
 Click Create Load Balancer.
+
+
+![Task 1](photos/loadbalancer_1.JPG)
 
 **Step 4**
 
@@ -242,6 +275,9 @@ Add Tags (optional):
 
 Click Create Auto Scaling group.
 
+
+![Task 1](photos/Auto-scaling_1.JPG)
+
 **To Ensure Load Balancer Test Results**
 
 Visit the Load Balancer DNS
@@ -253,6 +289,9 @@ Go to Load Balancers.
 Copy the DNS name (e.g., my-load-balancer-1234567890.us-east-1.elb.amazonaws.com
 
 Open your browser and paste your DNS name. You should see a web server page. (If it doesn't, it means your EC2 instances aren’t responding correctly maybe missing web server or wrong security group).
+
+
+![Task 1](photos/loadbalancetesting_1.JPG)
 
 
 
